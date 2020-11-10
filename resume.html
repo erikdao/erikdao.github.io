@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=content-widht, initial-scale=1.0">
+  <meta name="description" content="A blog on machine learning, deep learning and their applications">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cuong (Erik) Dao | neuraltalks.io</title>
+  <link rel="icon" href="images/neuraltalks.ico">
+  <!-- <link rel="stylesheet" href="/build/vendor.css"> -->
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBPFJRPY24"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EBPFJRPY24');
+  </script>
+</head>
+
+<body class="bg-gray-100">
+  <div id="header">
+    <div class="bg-gray-800 pt-24 lg:pt-0">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+        <header class="flex justify-between items-center py-10">
+          <div class="flex items-center">
+            <a href="index.html" class="block">
+              <object data="images/logo_inversed.svg" alt="neuraltalks.io" type="image/svg+xml"
+                style="width:auto; height: 22px;"></object>
+            </a>
+          </div>
+          <div class="text-base leading-5">
+            <a href="index.html" class="font-medium text-gray-500 hover:text-gray-400">Blog</a>
+            <a href="#" class="font-medium text-gray-100 hover:text-gray-400 pl-4">About</a>
+          </div>
+        </header>
+      </div>
+
+      <div class="max-w-3xl relative mx-auto px-4 pt-8 pb-16 sm:px-6 xl:max-w-5xl">
+        <div class="flex items-center">
+          <div class="w-32 mr-6">
+            <img src="images/avatar.jpg" class="rounded-lg shadow-2xl border-gray-800 border-solid border-4" />
+          </div>
+          <div class="flex-grow">
+            <h1 class="font-sans font-normal text-4xl text-gray-100 mb-2">Cuong (Erik) Dao</h1>
+            <h2 class="font-sans font-light text-base text-gray-400">
+              <span class="inline-block w-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </span>
+              Machine Learning Student | Full-stack Software
+              Engineer</h2>
+            <h2 class="font-sans font-light text-base text-gray-400">
+              <span class="inline-block w-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </span>
+              <span>Stockholm, Sweden</span></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="max-w-3xl mx-auto pt-6 px-4 sm:px-6 xl:max-w-5xl xl:px-0 flex">
+      <!-- SIDEBAR -->
+      <div id="sidebar" class="lg:w-1/4 xl:w-1/5">
+        <nav class="text-base flex-col">
+          <a href="#experience" class="text-base flex items-center py-2 hover:text-gray-900 font-medium text-gray-600">
+            <span class="inline-block w-4 mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </span>
+            Experience
+          </a>
+          <a href="#projects" class="flex items-center py-2 hover:text-gray-900 font-medium text-gray-600">
+            <span class="inline-block w-4 mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+              </svg>
+            </span>
+            Projects
+          </a>
+          <a href="#skills" class="flex items-center py-2 hover:text-gray-900 font-medium text-gray-600">
+            <span class="inline-block w-4 mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+              </svg>
+            </span>
+            Skills
+          </a>
+          <a href="#education" class="flex items-center py-2 hover:text-gray-900 font-medium text-gray-600">
+            <span class="inline-block w-4 mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path fill="#fff" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path fill="#fff"
+                  d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+              </svg>
+            </span>
+            Education</a>
+        </nav>
+      </div>
+      <!-- ./SIDEBAR -->
+      <div class="w-full lg:overflow-visible lg:w-3/4 xl:w-4/5">
+        <section id="experience" class="w-full pb-8 border-b-2 border-dotted border-gray-300">
+          <h2 class="whitespace-pre-wrap text-xl font-light pt-1 text-gray-700 mb-2">Experience</h2>
+          <div class="bg-white shadow-sm hover:shadow-md p-4 rounded-md flex mb-4">
+            <div class="w-2/3 sm:w-full sm:border-none md:border-r-2 md:border-dotted md:border-gray-300">
+              <p class="font-bold text-gray-900">Software Engineer Lead</p>
+              <p class="font-normal text-gray-700">Insight Data Science (Remote)</p>
+            </div>
+            <div class="w-1/3 xs:w-full">
+
+            </div>
+          </div>
+
+          <div class="bg-white shadow-sm hover:shadow-md p-4 rounded-md flex mb-4">
+            <div class="w-2/3 sm:w-full sm:border-none md:border-r-2 md:border-dotted md:border-gray-300">
+              <p class="font-bold text-gray-900">Research Intern</p>
+              <p class="font-normal text-gray-700">King Abdullah University of Science and Technology</p>
+            </div>
+            <div class="w-1/3 xs:w-full">
+
+            </div>
+          </div>
+
+          <div class="bg-white shadow-sm hover:shadow-md p-4 rounded-md flex mb-4">
+            <div class="w-2/3 sm:w-full sm:border-none md:border-r-2 md:border-dotted md:border-gray-300">
+              <p class="font-bold text-gray-900">Full-stack Developer</p>
+              <p class="font-normal text-gray-700">Airpoli App</p>
+            </div>
+            <div class="w-1/3 xs:w-full">
+
+            </div>
+          </div>
+
+          <div class="bg-white shadow-sm hover:shadow-md p-4 rounded-md flex mb-4">
+            <div class="w-2/3 sm:w-full sm:border-none md:border-r-2 md:border-dotted md:border-gray-300">
+              <p class="font-bold text-gray-900">Research Assistant</p>
+              <p class="font-normal text-gray-700">National University of Singapore</p>
+            </div>
+            <div class="w-1/3 xs:w-full">
+
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="w-full pt-4 pb-8 border-b-2 border-dotted border-gray-300">
+          <h2 class="whitespace-pre-wrap text-xl font-light pt-1 text-gray-700 mb-2">Projects</h2>
+          <div class="bg-white shadow-sm hover:shadow-md p-4 rounded-md mb-4">
+            <div id="title" class="w-full flex">
+              <div class="w-3/5 sm:w-full mr-2">
+                <p class="font-bold text-gray-900">A Novel Framework for Measuring the Robustness of Visual QA Models
+                </p>
+                <p class="font-normal text-gray-700">Jia-Hong Huang, Cuong Duc Dao, Modar Alfadly, Bernard Ghanem</p>
+                <p class="font-normal text-gray-700 italic">Oral paper, The Thirty-Third AAAI Conference on Artificial
+                  Intelligence (AAAI-19)</p>
+              </div>
+              <div class="w-2/5 xs:w-full">
+                <img src="images/vqa_robustness_paper.png" alt="VQA Robustness" class="rounded-lg">
+              </div>
+            </div>
+            <div class="mt-2 text-sm text-gray-600 p-2">
+              Deep neural networks have been playing an essential role in many computer vision tasks including Visual
+              Question Answering (VQA). Until recently, the study of their accuracy was the main focus of research but
+              now there is a trend toward assessing the robustness of these models against adversarial attacks by
+              evaluating their tolerance to varying noise levels. In VQA, adversarial attacks can target the image
+              and/or the proposed main question and yet there is a lack of proper analysis of the later. In this work,
+              we propose a flexible framework that focuses on the language part of VQA that uses semantically relevant
+              questions, dubbed basic questions, acting as controllable noise to evaluate the robustness of VQA models.
+              We hypothesize that the level of noise is positively correlated to the similarity of a basic question to
+              the main question. Hence, to apply noise on any given main question, we rank a pool of basic questions
+              based on their similarity by casting this ranking task as a LASSO optimization problem. Then, we propose a
+              novel robustness measure, R_score, and two large-scale basic question datasets (BQDs) in order to
+              standardize robustness analysis for VQA models.
+            </div>
+          </div>
+
+          <div class="bg-white shadow-sm hover:shadow-md p-4 rounded-md mb-4">
+            <div id="title" class="w-full flex">
+              <div class="w-3/5 sm:w-full mr-2">
+                <p class="font-bold text-gray-900">Guess where? Actor-supervision for Spatiotemporal Action Localization
+                </p>
+                <p class="font-normal text-gray-700">Victor Escorcia, Cuong Dao, Mihir Jain, Bernard Ghanem, Cees
+                  Snoek</p>
+                <p class="font-normal text-gray-700 italic">Computer Vision and Image Understanding Journal</p>
+              </div>
+              <div class="w-2/5 xs:w-full">
+                <img src="images/actor_paper.png" alt="Actor-supervision" class="rounded-lg">
+              </div>
+            </div>
+            <div class="mt-2 text-sm text-gray-600 p-2">
+              This paper addresses the problem of spatiotemporal localization of actions in videos. Compared to leading
+              approaches, which all learn to localize based on carefully annotated boxes on training video frames, we
+              adhere to a solution only requiring video class labels. We introduce an actor-supervised architecture that
+              exploits the inherent compositionality of actions in terms of actor transformations, to localize actions.
+              We make two contributions. First, we propose actor proposals derived from a detector for human and
+              non-human actors intended for images, which are linked over time by Siamese similarity matching to account
+              for actor deformations. Second, we propose an actor-based attention mechanism enabling localization from
+              action class labels and actor proposals. It exploits a new actor pooling operation and is end-to-end
+              trainable. Experiments on four action datasets show actor supervision is state-of-the-art...
+            </div>
+          </div>
+
+          <div class="bg-white shadow-sm hover:shadow-md p-4 rounded-md mb-4">
+            <div id="title" class="w-full flex">
+              <div class="w-2/3 sm:w-full sm:border-none md:border-r-2 md:border-dotted md:border-gray-300">
+                <p class="font-bold text-gray-900">Maritime Vessel Images Classification using Deep Convolutional Neural
+                  Networks</p>
+                <p class="font-normal text-gray-700">Cuong Dao-Duc, Hua Xiaohui, Olivier Morère</p>
+                <p class="font-normal text-gray-700 italic">Proceedings of the Sixth International Symposium on
+                  Information and Communication Technology (SoICT 2015)
+              </div>
+              <div class="w-1/3 xs:w-full">
+
+              </div>
+            </div>
+            <div class="mt-2 text-sm text-gray-600 p-2">
+              The ability to identify maritime vessels and their type is an important component of modern maritime
+              safety and security. In this work, we present the application of deep convolutional neural networks to the
+              classification of maritime vessel images. We use the AlexNet deep convolutional neural network as our base
+              model and propose a new model that is twice smaller then the AlexNet. We conduct experiments on different
+              configurations of the model on commodity hardware. We comparatively evaluate and analyse the performance
+              of different configurations the model. We measure the top-1 and top-5 accuracy rates. The contribution of
+              this work is the implementation, tuning and evaluation of automatic image classifier for the specific
+              domain of maritime vessels with deep convolutional neural networks under the constraints imposed by
+              commodity hardware and size of the image collection.
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" class="w-full pt-4 pb-8 border-b-2 border-dotted border-gray-300">
+          <h2 class="whitespace-pre-wrap text-xl font-light pt-1 text-gray-700 mb-2">Skills</h2>
+        </section>
+
+        <section id="education" class="w-full pt-4 pb-8 border-b-2 border-dotted border-gray-300">
+          <h2 class="whitespace-pre-wrap text-xl font-light pt-1 text-gray-700 mb-2">Education</h2>
+          <div class="bg-white shadow-sm hover:shadow-md p-4 rounded-md flex mb-4">
+            <div class="flex-shrink-0 flex-grow-0">
+              <span class="inline-block w-12 mr-2">
+                <object data="images/kth_logo.svg" type="image/svg+xml" alt="KTH"></object>
+              </span>
+            </div>
+            <div class="sm:w-full sm:border-none md:border-r-2 md:border-dotted md:border-gray-300">
+              <p class="font-bold text-gray-900">KTH Royal Institute of Technology</p>
+              <p class="font-normal text-gray-700">Master's Programme in Machine Learning</p>
+            </div>
+            <div class="w-1/5 xs:w-full">
+              <p class="text-right text-gray-700 font-light">2020 - 2022</p>
+            </div>
+          </div>
+
+          <div class="bg-white shadow-sm hover:shadow-md p-4 rounded-md flex mb-4">
+            <div class="flex-shrink-0 flex-grow-0">
+              <span class="inline-block w-12 mr-2">
+                <img src="images/hust_logo.png" alt="HUST" class="block mx-auto w-10/12">
+              </span>
+            </div>
+            <div class="sm:w-full sm:border-none md:border-r-2 md:border-dotted md:border-gray-300">
+              <p class="font-bold text-gray-900">Hanoi University of Science and Technology</p>
+              <p class="font-normal text-gray-700">Engineer Degree in Information and Communication Technology</p>
+            </div>
+            <div class="w-1/5 xs:w-full">
+              <p class="text-right text-gray-700 font-light">2011 - 2017</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+
+  </div>
+</body>
+
+</html>
