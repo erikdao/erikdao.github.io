@@ -13,9 +13,20 @@
   <title>Introduction to Autoencoders | neuraltalks.io</title>
   <link rel="icon" href="images/neuraltalks.ico">
   <!-- <link rel="stylesheet" href="/build/vendor.css"> -->
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBPFJRPY24"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,6 +41,7 @@
       max-width: 65ch;
       font-size: 1rem;
       line-height: 1.75;
+      margin-top: 1.5em;
     }
   </style>
 </head>
@@ -95,6 +107,9 @@
           </dl>
           <div class="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2">
             <div class="prose max-w-none pt-10 pb-8">
+              <div class="rounded-xl mx-2 my-2 bg-red-100 text-red-800 p-4">
+                Sample content. Texts are not my own.
+              </div>
               <p>
                 Autoencoders are an unsupervised learning technique in which we leverage neural networks for the task of
                 representation learning. Specifically, we'll design a neural network architecture such that we impose a
@@ -104,6 +119,66 @@
                 correlations between input features), this structure can be learned and consequently leveraged when
                 forcing the input through the network's bottleneck.
               </p>
+
+              <div class="prose">
+                The ideal autoencoder balances the following:
+                <ul class="list-disc">
+                  <li class="ml-4">Sensitive to the input enough to accurately build a reconstruction</li>
+                  <li class="ml-4">Insensitive enough to the input that the model doesn't simply mesmorize or overfit
+                    training data
+                  </li>
+                </ul>
+              </div>
+              <div class="prose">
+                To that end, the training objective function for an autoencoder is usually in the form
+                \[
+                \mathcal{L}\left( x, \hat{x} \right) + \beta * \text{regularizer}
+                \]
+              </div>
+
+              <h2 class="text-2xl font-bold mt-6">Spare autoencoders</h2>
+              <div class="prose">
+                Spare autoencoders offer us an alternative method for introducing an information bottleneck without
+                <span class="italic">requiring</span> a reduction in the number of nodes at our hidden layers. Rather,
+                we'll construct our loss function such that we penalize <span class="italic">activations</span> within a
+                layer. For any given observation, we'll encourage our network to learn an encoding and decoding which
+                only relies on activating a small number of neurons. It's worth noting that this is a different approach
+                towards regularization, as we normally regularize the <span class="italic">weights</span> of a network,
+                not the activations.
+              </div>
+              <div class="prose">
+                It's important to note that the individual nodes of a trained model which activate are <span
+                  class="italtic">data-dependent</span>, different inputs will result in activations of different nodes
+                through the network.
+              </div>
+              <div class="prose">
+                One result of this fact is that <span class="font-bold">we allow our network to sensitize individual
+                  hidden layer nodes toward specific attributes of the input data.</span> Whereas an undercomplete
+                autoencoder will use the entire network for every observation, a sparse autoencoder will be forced to
+                selectively activate regions of the network depending on the input data. As a result, we've limited the
+                network's capability to extraect features from the data. This allows us to consider the latent state
+                representation and regularization of the network <span class="italic">separately</span>, such that we
+                can choose a latent state representation (i.e., encoding dimensionality) in accordance with what makes
+                sense given the context of the data while imposing regularization by the sparsity constraint.
+              </div>
+
+              <div class="prose">
+                There are two main ways by which we can impose this sparsity constraint; both involve measuring the
+                hidden layer activations for each traeining batch and adding some term to the loss function in order to
+                penalize excessive activations. These terms are:
+
+                <ul class="list-disc mt-2">
+                  <li class="ml-4 pl-3"><strong>L1 Regularization</strong>: We can add a term to our loss function that
+                    penalizes the absolute value of the vector of activations \( a \) in layer \( h \) for observation
+                    \( i \), scaled by a tuning parameters \( \lambda \).
+                    \[
+                    \mathcal{L}\left( x, \hat{x} \right) + \lambda \displaystyle \sum_{i=1} |a_i^{(h)}|
+                    \]
+                  </li>
+                </ul>
+              </div>
+
+              <h2 class="text-2xl font-bold mt-4 mb-2">Denoising autoencoders</h2>
             </div>
           </div>
         </div>
