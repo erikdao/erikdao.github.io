@@ -4,18 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=content-widht, initial-scale=1.0">
-  <meta name="description"
-    content="Autoencoders are unsupervised learning technique in which we design neural networks for the task of representation learning">
+  <meta name="description" content="A blog on machine learning, deep learning and their applications">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Facebook Content -->
-  <meta property="og:title" content="Introduction to Autoencoders | neuraltalks.io">
-  <meta property="og:image" content="images/202012/20201218_Autoencoders.png">
-  <title>Introduction to Autoencoders | neuraltalks.io</title>
+  <title>Principal Component Analysis | neuraltalks.io</title>
   <link rel="icon" href="images/neuraltalks.ico">
   <!-- <link rel="stylesheet" href="/build/vendor.css"> -->
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBPFJRPY24"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -61,13 +55,13 @@
               <div>
                 <dt class="sr-only">Published on</dt>
                 <dd class="text-base leading-6 font-medium text-gray-500">
-                  <time>Friday, December 18, 2020</time>
+                  <time>Monday, November 16, 2020</time>
                 </dd>
               </div>
             </dl>
             <div
               class="text-3xl leading-9 font-extrabold text-gray-900 tracking-tight sm:text-4xl sm:leading-none md:text-5xl md:leading-none">
-              Introduction to Autoencoders
+              Probability Distributions: Bernoulli, Categorical and Gaussian
             </div>
           </div>
         </header>
@@ -96,13 +90,10 @@
           <div class="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2">
             <div class="prose max-w-none pt-10 pb-8">
               <p>
-                Autoencoders are an unsupervised learning technique in which we leverage neural networks for the task of
-                representation learning. Specifically, we'll design a neural network architecture such that we impose a
-                bottleneck in the network which forces a compressed knowledge representation of the original input. If
-                the input features were each independent of one another, this compression and subsequent reconstruction
-                would be a very difficult task. However, if some sort of structure exists in the data (i.e.,
-                correlations between input features), this structure can be learned and consequently leveraged when
-                forcing the input through the network's bottleneck.
+                This post presents several equivalent vies on principal component analysis (PCA). The three main themes
+                are finding directions in the data space along which the data are maximally variable, finding
+                lower-dimensional yet accurate representations of the data, and formulating a probabilistic model of
+                PCA.
               </p>
             </div>
           </div>
